@@ -274,6 +274,88 @@ p {
   color: #fb866a;
 }
 
+/* Print button styles */
+#print-btn {
+  background-color: #2d7788;
+  border-color: #2d7788;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#print-btn:hover {
+  background-color: #1a454f;
+  border-color: #1a454f;
+}
+
+#print-btn i {
+  margin-right: 8px;
+}
+
+/* Hide print button when printing */
+@media print {
+  #print-btn {
+    display: none;
+  }
+
+  /* Ensure print layout matches screen */
+  body {
+    font-size: 12px; /* Adjust font size for print */
+  }
+
+  .wrapper {
+    max-width: none;
+    margin: 0;
+    box-shadow: none;
+    display: block;
+  }
+
+  .mt-lg-5 {
+    margin-top: 0 !important;
+  }
+
+  .sidebar-wrapper {
+    position: static;
+    width: 100%;
+    min-height: auto;
+    background: #42A8C0;
+    color: #fff;
+    padding: 20px;
+    page-break-after: always;
+  }
+
+  .main-wrapper {
+    padding: 20px;
+  }
+
+  .footer {
+    display: none; /* Hide footer in print */
+  }
+
+  .certificates {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+
+  .certificates img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+  }
+
+  .section {
+    page-break-inside: avoid;
+  }
+
+  .container-block {
+    page-break-inside: avoid;
+  }
+}
+
 @media (max-width: 767.98px) {
   .sidebar-wrapper {
     position: static;
