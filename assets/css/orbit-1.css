@@ -403,3 +403,23 @@ p {
 .certificates img:hover {
     transform: scale(1.05);
 }
+
+.skills-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.skills-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    column-gap: 30px;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+    font-weight: 400;
+    break-inside: avoid;
+}
